@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
 <body>
     <div class="content" id="root">
-
-        <section>
-            <select name="ufs" id="ufs">
-                <option value="0">Selecione um estado</option>
-            </select>
+        <div class="form">
+            <section>
+                <select name="ufs" id="ufs">
+                    <option value="0">Selecione um estado</option>
+                </select>
+            </section>
+            <section>
+                <select name="city" id="city" disabled>
+                    <option value="0">Selecione uma cidade</option>
+                </select>
+            </section>
+            <section>
+                <input type="date" id="date">
+            </section>
+    
+            <button name="agendar" disabled>Agendar</button>
+            
+        </div>
+        <section class="secrtio-card" id="secrtio-card">
+                
         </section>
-        <section>
-            <select name="city" id="city" disabled>
-                <option value="0">Selecione uma cidade</option>
-            </select>
-        </section>
-
-        <button name="agendar" disabled>Agendar</button>
-        
     </div>
     <script src="./index.js"></script>
 </body>
