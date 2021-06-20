@@ -2,7 +2,7 @@ const ufSelect = document.querySelector('select[name=ufs]')
 const citySelect = document.querySelector('select[name=city]')
 const btnAgendar = document.querySelector('button[name=agendar]')
 const date = document.querySelector('input[type = date')
-const root = document.querySelector('#secrtio-card')
+const root = document.querySelector('#section-card')
 
 const states = fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
 .then(result => result.json())

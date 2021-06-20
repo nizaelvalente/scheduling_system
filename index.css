@@ -13,6 +13,7 @@
 .form {
     height: 100px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 15px;
 }
@@ -35,16 +36,17 @@ button {
     padding: 5px;
 }
 
-.secrtio-card {
+.section-card {
     display: flex;
     flex-wrap: wrap;
 }
 
 .card {
-    max-width: 200px;
+    max-width: 250px;
     width: 100%;
     box-shadow: 2px 2px 8px black;
     margin: 0 20px 20px 0;
+    padding: 10px;
 }
 .card p {
     padding: 5px;
