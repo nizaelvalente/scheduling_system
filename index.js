@@ -49,7 +49,7 @@ const createElement = (txtUf, txtCity, txtDate) => {
     const p2 = document.createElement('p')
     const p3 = document.createElement('p')
     div.classList = 'card'
-    p0.innerHTML =`Sua próxima viagem.}`
+    p0.innerHTML =`Sua próxima viagem.`
     p1.innerHTML =`Estado: ${txtUf}`
     p2.innerHTML = `Cidade: ${txtCity}`
     p3.innerHTML = `Data: ${txtDate}`
