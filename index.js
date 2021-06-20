@@ -44,14 +44,17 @@ const agendar = () => {
 
 const createElement = (txtUf, txtCity, txtDate) => {
     const div = document.createElement('div')
+    const p0 = document.createElement('p')
     const p1 = document.createElement('p')
     const p2 = document.createElement('p')
     const p3 = document.createElement('p')
     div.classList = 'card'
+    p0.innerHTML =`Sua próxima viagem.}`
     p1.innerHTML =`Estado: ${txtUf}`
     p2.innerHTML = `Cidade: ${txtCity}`
     p3.innerHTML = `Data: ${txtDate}`
     root.appendChild(div)
+    div.appendChild(p0)
     div.appendChild(p1)
     div.appendChild(p2)
     div.appendChild(p3)
