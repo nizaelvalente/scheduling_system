@@ -27,10 +27,17 @@ const citys = (event) =>{
     })
 } 
 
+const data = (event) => {
+    const value = event.target.value
+    value  === '0'? date.disabled = true : date.disabled = false
+}
+
 const btn = (event) => {
     const value = event.target.value
-    value  === '0'? btnAgendar.disabled = true : btnAgendar.disabled = false
+    value  === ''? btnAgendar.disabled = true : btnAgendar.disabled = false
 }
+
+
 
 const agendar = () => {
     const indexUf = ufSelect.selectedIndex
@@ -63,5 +70,6 @@ const createElement = (txtUf, txtCity, txtDate) => {
 
 
 ufSelect.addEventListener('change', citys)
-citySelect.addEventListener('change', btn )
+citySelect.addEventListener('change', data )
 btnAgendar.addEventListener('click',agendar)
+date.addEventListener('change',btn)
