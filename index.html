@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./global.css">
+    <title>Agendamento de viagens</title>
 </head>
 <body>
-    <div class="content" id="root">
-        <div class="form">
-            <section>
-                <select name="ufs" id="ufs">
-                    <option value="0">Selecione um estado</option>
-                </select>
+    <div class="content">
+        <header>
+            <h1>Agende sua viagem</h1>
+        </header>
+        <main>
+            <section class="sectio-input">
+                <form action="" id="form">
+                    <select name="uf" id="uf" class="select">
+                        <option class="options" value="0">Selecione um estato</option>
+                    </select>
+                    <select name="0" id="citys"  class="select">
+                        <option class="options" value="0">Selecione uma cidade</option>
+                    </select>
+                    <input type="date" class="select">
+                </form>
+                <button class="buttons" id="button">Agendar</button>
             </section>
-            <section>
-                <select name="city" id="city" disabled>
-                    <option value="0">Selecione uma cidade</option>
-                </select>
+
+            <section id="section-card">
+                <div class="card" id="card">
+                    <h3>Sua próxima viajem será para:</h3>
+                    <p>Estado: Pará</p>
+                    <p>Cidade: Moju</p>
+                    <p>Data: 09-07-2021</p>
+                </div>
             </section>
-            <section>
-                <input type="date" id="date" disabled>
-            </section>
-    
-            <button name="agendar" disabled>Agendar</button>
-            
-        </div>
-        <section class="section-card" id="section-card">
-                
-        </section>
+        </main>
     </div>
-    <script src="./index.js"></script>
+    <script src="./room.js"></script>
 </body>
 </html>

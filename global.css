@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.content {
+    width: 90%;
+}
+.content header{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background: rgb(127, 204, 75);
+    margin-bottom: 1rem;
+}
+.content header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.sectio-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sectio-input > button{
+    margin: 1rem 1rem 1rem 0;
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.6rem;
+}
+.sectio-input form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sectio-input form select {
+    margin: 1rem 1rem 1rem 0;
+    width: 31rem;
+    font-size: 1.6rem;
+}
+
+.sectio-input form input {
+    margin: 1rem 1rem 1rem 0;
+    width: 15rem;
+    font-size: 1.6rem;
+}
+
+.sectio-input form .select {
+ height: 5rem;
+}
+
+.card {
+    font-size: 1.6rem;
+    width: min(35rem, 60rem);
+    border: .2rem solid rgb(116, 116, 138);
+    padding: 1rem;
+    box-shadow: .2rem .4rem .8rem rgb(0, 0, 27);
+    border-radius: 0 1rem 1rem 1rem;
+    margin:0 2rem 2rem 0;
+}
+
+.card h1, .card p {
+    font-size: 1.8rem;
+    padding: .5rem 0;
+}
+
+#section-card {
+    display: flex;
+    flex-wrap: wrap;
+}
