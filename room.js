@@ -3,6 +3,8 @@ const content = document.querySelector('.content')
 const selectUF = document.querySelector('#uf')
 const selectDate = document.querySelector('input[type = date')
 const selectCity = document.querySelector('#citys')
+const form = document.querySelector('#form')
+const button = document.querySelector('#button')
 
 // buscar os estados e preencher as opções do input ufs
 const ufs =fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
@@ -24,14 +26,14 @@ const citys = (event) => {
         for (const iterator of city) {
             selectCity.innerHTML += `<option value="${iterator.id}">${iterator.nome}</option>`
         }
+
+        idUF !== '0'? selectCity.disabled = false : selectCity.disabled = true
     })
 }
 
 //execulta uma ação quando mudar a opção do input ufs
 selectUF.addEventListener('change', citys)
 
-
-const form = document.querySelector('#form')
 
 //clona um elemento
 const cloneElement = () => {
@@ -65,7 +67,21 @@ const cloneElement = () => {
 
 }
 
-
 //ação do button agendar
-const button = document.querySelector('#button')
+
+
+
 button.addEventListener('click', cloneElement)
+
+
+selectCity.addEventListener('change', (event)=>{
+    const indexCity = event.target.value
+    
+    indexCity !== '0'? selectDate.disabled = false : selectDate.disabled = true
+
+})
+
+selectDate.addEventListener('change',()=>{
+    const valueDate = selectDate.value
+    valueDate !== ''? button.disabled = false : button.disabled = true 
+})
