@@ -2,6 +2,7 @@
 const content = document.querySelector('.content')
 const selectUF = document.querySelector('#uf')
 const selectDate = document.querySelector('input[type = date')
+const selectCity = document.querySelector('#citys')
 
 // buscar os estados e preencher as opções do input ufs
 const ufs =fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
@@ -13,7 +14,7 @@ const ufs =fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
 } )
 
 // buscar as cidades e preencher o input citys
-const selectCity = document.querySelector('#citys')
+
 const citys = (event) => {
     const idUF = event.target.value
     selectCity.innerHTML = `<option value="0">Selecione uma cidade</option>`
@@ -52,7 +53,8 @@ const cloneElement = () => {
 
     const city = document.createElement('p')
     const indexCity = selectCity.selectedIndex
-    const textCity = selectUF.options[indexCity].innerHTML
+    const textCity = selectCity.options[indexCity].innerHTML
+    console.log(textCity)
     city.innerHTML = `Cidade: ${textCity}`
     cloneEl.appendChild(city)
 
