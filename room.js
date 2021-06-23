@@ -27,7 +27,7 @@ const citys = (event) => {
             selectCity.innerHTML += `<option value="${iterator.id}">${iterator.nome}</option>`
         }
 
-        idUF !== '0'? selectCity.disabled = false : selectCity.disabled = true
+        idUF !== '0'? selectCity.disabled = false : selectCity.disabled = true, selectDate.disabled = true, button.disabled = true
     })
 }
 
@@ -77,7 +77,7 @@ button.addEventListener('click', cloneElement)
 selectCity.addEventListener('change', (event)=>{
     const indexCity = event.target.value
     
-    indexCity !== '0'? selectDate.disabled = false : selectDate.disabled = true
+    indexCity !== '0'? selectDate.disabled = false : selectDate.disabled = true, button.disabled = true
 
 })
 
